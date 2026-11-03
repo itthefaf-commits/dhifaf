@@ -420,3 +420,18 @@ a.dh-c-item:hover{border-color:var(--gold);transform:translateX(-4px)}
 
 .dh{max-width:none;width:100%}
 #dh-top .dh-hero{padding-top:3rem}
+
+/* floating WhatsApp + socials */
+#dh-wa-float{position:fixed;bottom:20px;left:20px;z-index:9998;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(37,211,102,.8);transition:transform .25s}
+#dh-wa-float:hover{transform:scale(1.08)}
+#dh-wa-float svg{width:30px;height:30px}
+.dh-social{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.35rem}
+.dh-social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#F2E8D6;color:#A27A30;transition:.25s}
+.dh-social a:hover{background:#C3994A;color:#fff;transform:translateY(-2px)}
+.dh-social svg{width:19px;height:19px}
+#dh-foot-social{background:#2B2A27;padding:1.4rem 0;border-bottom:1px solid rgba(255,255,255,.1);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
+.dh-foot-social-in{width:min(1180px,92%);margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;color:#fff;font-weight:600}
+#dh-foot-social .dh-social{margin:0}
+#dh-foot-social .dh-social a{background:rgba(255,255,255,.08);color:#E3C88F}
+#dh-foot-social .dh-social a:hover{background:#C3994A;color:#fff}
+@media (max-width:600px){#dh-wa-float{width:52px;height:52px;bottom:16px;left:16px}}
