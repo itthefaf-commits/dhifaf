@@ -2,13 +2,12 @@
 | Variable         | Type       | Description                                                         |
 |------------------|------------|---------------------------------------------------------------------|
 | page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    {% component home %}
+    {% include 'pages.partials.dhifaf-home' %}
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
+    <script defer src="{{ 'dhifaf.js' | asset }}"></script>
 {% endblock %}

@@ -15,44 +15,7 @@
     <salla-bullet-delivery-tag></salla-bullet-delivery-tag>
   </div>
 
-  {# Top Nav #}
-  <div class="top-navbar">
-    <div class="container flex justify-between">
-      <div class="flex-1 flex items-center gap-2">
-          {# Footer Menu #}
-          {% if important_links %}
-            <salla-menu data-testid="store-header-topnav" source="footer" topnav></salla-menu>
-          {% endif %}
-
-          {# Language & Currency Component #}
-          <div class="header-buttons">
-              {% if store.settings.is_multilingual or store.settings.currencies_enabled %}
-                  <salla-localization-modal data-testid="store-header-localization" show-trigger></salla-localization-modal>
-              {% endif %}
-          </div>
-
-          {# Bullet Delivery tag — desktop only; mobile instance is above the top nav #}
-          <div class="hidden lg:block">
-            <salla-bullet-delivery-tag></salla-bullet-delivery-tag>
-          </div>
-
-          {# Scopes | Branches #}
-          {% if store.scope %}
-              <button class="btn--rounded-gray"
-                      onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
-                  <i class="sicon-location rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
-              </button>
-          {% endif %}
-
-          {# Search bar #}
-          <div class="header-search flex-1">
-            <salla-search data-testid="store-header-search" inline oval height="36"></salla-search>
-          </div>
-      </div>
-
-      <salla-contacts data-testid="store-header-contacts" is-header></salla-contacts>
-    </div>
-  </div>
+  {# Top Nav removed for Dhifaf #}
 
   {# Main Nav #}
   <div id="mainnav" class="main-nav-container shadow-default bg-white flex items-center">
@@ -63,8 +26,9 @@
                       <a data-testid="store-header-mobile-toggle" class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
                         <i class="sicon-menu text-primary text-2xl"></i>
                       </a>
-                      <a data-testid="store-header-logo" class="navbar-brand" href="{{ store.url }}">
+                      <a data-testid="store-header-logo" class="navbar-brand flex items-center" href="{{ store.url }}">
                           <img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo|cdn(175) }}" alt="{{ store.name }} logo">
+                          <span class="dhf-brand-txt"><b>جمعية ضفاف</b><small>للخدمات الإنسانية</small></span>
                           {% if is_page('index') %}
                             <h1 class="sr-only">{{ store.name }}</h1>
                           {% else %}
@@ -74,6 +38,7 @@
                       <custom-main-menu></custom-main-menu>
                   </div>
                   <div class="flex items-center justify-end my-2.5">
+                      <a class="dhf-donate" href="/-/c1967518091"><i class="sicon-heart"></i>تبرع الآن</a>
                       <salla-user-menu data-testid="store-header-user-menu" avatar-only show-header show-trigger></salla-user-menu>
                       <salla-cart-summary data-testid="store-header-cart" class="ml-4 rtl:ml-[unset] rtl:mr-4">
                         <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
