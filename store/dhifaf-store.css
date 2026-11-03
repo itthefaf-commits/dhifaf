@@ -422,7 +422,7 @@ a.dh-c-item:hover{border-color:var(--gold);transform:translateX(-4px)}
 #dh-top .dh-hero{padding-top:3rem}
 
 /* floating WhatsApp + socials */
-#dh-wa-float{position:fixed;bottom:20px;left:20px;z-index:9998;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(37,211,102,.8);transition:transform .25s}
+#dh-wa-float{position:fixed;bottom:20px;left:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(37,211,102,.8);transition:transform .25s}
 #dh-wa-float:hover{transform:scale(1.08)}
 #dh-wa-float svg{width:30px;height:30px}
 .dh-social{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.35rem}
