@@ -15,7 +15,7 @@
     var b=document.createElement('div');b.className='dh';b.id='dh-bottom';b.innerHTML=BOTTOM.split('__CDN__').join(CDN);
     main.insertBefore(t,main.firstChild);main.appendChild(b);
     main.querySelectorAll('.s-block--statistics,[id^="about-charity"]').forEach(function(e){e.style.display='none'});
-    if(location.hash){var tg=document.getElementById(location.hash.slice(1));if(tg)setTimeout(function(){tg.scrollIntoView({behavior:'smooth'})},400);}
+    if(location.hash){var tg=document.getElementById(location.hash.slice(1));if(tg){var go=function(){var y=tg.getBoundingClientRect().top+window.scrollY-110;window.scrollTo(0,y)};setTimeout(go,300);setTimeout(go,1500);setTimeout(go,3500);window.addEventListener('load',function(){setTimeout(go,300)});}}
     try{
 document.querySelectorAll('.dh').forEach(function(e){e.classList.add('dh-js')});
 /* ===== Icons ===== */
