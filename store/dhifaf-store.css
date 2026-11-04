@@ -435,3 +435,8 @@ a.dh-c-item:hover{border-color:var(--gold);transform:translateX(-4px)}
 #dh-foot-social .dh-social a{background:rgba(255,255,255,.08);color:#E3C88F}
 #dh-foot-social .dh-social a:hover{background:#C3994A;color:#fff}
 @media (max-width:600px){#dh-wa-float{width:52px;height:52px;bottom:16px;left:16px}}
+/* governance year groups */
+.dh .dh-year{display:flex;align-items:center;gap:.8rem;margin:1.6rem 0 .9rem;font-size:1.05rem;color:#A27A30}
+.dh .dh-year:first-of-type{margin-top:0}
+.dh .dh-year::after{content:"";flex:1;height:1px;background:#E9DDC7}
+.dh .dh-year span{background:#2B2A27;color:#fff;padding:.2rem .9rem;border-radius:999px;font-size:.88rem}
